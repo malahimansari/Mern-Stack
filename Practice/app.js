@@ -26,9 +26,28 @@
 // let price = products.sort((a,b) => b.price - a.price);
 // console.log(price); 
 
+
 // 4. *Reduce for Aggregation:*
 //    - Q: Use the reduce method to find the total sum of all even numbers in an array of integers.
 
-const num = [1,4,5,7,8,9,2,6];
-const sum = num.reduce((acc, cur) => (cur %2 === 0) ? acc + cur : acc, 0);
-console.log(sum);
+// const num = [1,4,5,7,8,9,2,6];
+// const sum = num.reduce((acc, cur) => (cur %2 === 0) ? acc + cur : acc, 0);
+// console.log(sum);
+
+
+// 5. *Find and Modify:*
+//    - Q: Given an array of objects with 'id' properties, use the find method to locate an object with a specific 'id' and update its 'status' property to 'completed'.
+
+const users = [
+    {id : 1, name : "Malahim", status : "Pending"},
+    {id : 2, name : "Danish", status : "Pending"},
+    {id : 3, name : "Fatima", status : "In Progress"},
+    {id : 4, name : "Shayan", status : "Completed"},
+    {id : 5, name : "Ayesha", status : "In Progress"}
+];
+const search = 3;
+const users_update = users.find(user => user.id === search);
+(users_update) ? users_update.status = "Completed" : "";
+console.log(users);
+
+
