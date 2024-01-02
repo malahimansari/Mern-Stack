@@ -22,6 +22,6 @@
 // 3. *Sorting Objects:*
 //    - Q: Given an array of objects with a 'price' property, use the sort method to arrange them in descending order based on their prices.
 
-let price = [200,500,300,900,100];
-price.sort((a,b) => b-a);
+let products = [{name : "Product 1", price : 20},{name : "Product 2", price : 40},{name : "Product 3", price : 10},{name : "Product 4", price : 35}];
+let price = products.sort((a,b) => b.price - a.price);
 console.log(price); 
