@@ -11,9 +11,17 @@
 // 2. *Filter and Map Combination:*
 //    - Q: Take an array of strings, filter out the ones with a length less than 5, and then capitalize the remaining strings using the map method.
 
-let arr = ["car","bus","aeroplane","bike","helicopter"];
+// let arr = ["car","bus","aeroplane","bike","helicopter"];
 
-let filter_array = arr.filter(e => e.length >=5)
-.map(e => e.charAt(0).toUpperCase() + e.slice(1));
+// let filter_array = arr.filter(e => e.length >=5)
+// .map(e => e.charAt(0).toUpperCase() + e.slice(1));
 
-console.log(filter_array);
+// console.log(filter_array);
+
+
+// 3. *Sorting Objects:*
+//    - Q: Given an array of objects with a 'price' property, use the sort method to arrange them in descending order based on their prices.
+
+let price = [200,500,300,900,100];
+price.sort((a,b) => b-a);
+console.log(price); 
