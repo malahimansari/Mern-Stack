@@ -22,6 +22,13 @@
 // 3. *Sorting Objects:*
 //    - Q: Given an array of objects with a 'price' property, use the sort method to arrange them in descending order based on their prices.
 
-let products = [{name : "Product 1", price : 20},{name : "Product 2", price : 40},{name : "Product 3", price : 10},{name : "Product 4", price : 35}];
-let price = products.sort((a,b) => b.price - a.price);
-console.log(price); 
+// let products = [{name : "Product 1", price : 20},{name : "Product 2", price : 40},{name : "Product 3", price : 10},{name : "Product 4", price : 35}];
+// let price = products.sort((a,b) => b.price - a.price);
+// console.log(price); 
+
+// 4. *Reduce for Aggregation:*
+//    - Q: Use the reduce method to find the total sum of all even numbers in an array of integers.
+
+const num = [1,4,5,7,8,9,2,6];
+const sum = num.reduce((acc, cur) => (cur %2 === 0) ? acc + cur : acc, 0);
+console.log(sum);
