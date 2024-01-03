@@ -38,16 +38,25 @@
 // 5. *Find and Modify:*
 //    - Q: Given an array of objects with 'id' properties, use the find method to locate an object with a specific 'id' and update its 'status' property to 'completed'.
 
-const users = [
-    {id : 1, name : "Malahim", status : "Pending"},
-    {id : 2, name : "Danish", status : "Pending"},
-    {id : 3, name : "Fatima", status : "In Progress"},
-    {id : 4, name : "Shayan", status : "Completed"},
-    {id : 5, name : "Ayesha", status : "In Progress"}
-];
-const search = 3;
-const users_update = users.find(user => user.id === search);
-(users_update) ? users_update.status = "Completed" : "";
-console.log(users);
+// const users = [
+//     {id : 1, name : "Malahim", status : "Pending"},
+//     {id : 2, name : "Danish", status : "Pending"},
+//     {id : 3, name : "Fatima", status : "In Progress"},
+//     {id : 4, name : "Shayan", status : "Completed"},
+//     {id : 5, name : "Ayesha", status : "In Progress"}
+// ];
+// const search = 3;
+// const users_update = users.find(user => user.id === search);
+// (users_update) ? users_update.status = "Completed" : "";
+// console.log(users);
 
+
+// 6. *Chaining Methods:*
+//    - Q: Create a chain of array methods to find the average of all positive numbers in an array of mixed integers and return the result rounded to two decimal places.
+
+
+const integers = [3,4,-5,0,1,20,-8,1];
+const positiveNumbers = integers.filter(num => num > 0);
+const average = (positiveNumbers.reduce((acc, cur) => acc + cur, 0) / positiveNumbers.length).toFixed(2);
+console.log(average); 
 
