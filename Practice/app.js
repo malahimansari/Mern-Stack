@@ -65,11 +65,27 @@
 //    - Q: Implement a function that takes an array of objects with 'age' properties and returns an array of those who are adults (age 18 and above) using the filter method.
 
 
-const user = [
-    {name : 'Malahim', age : 16},
-    {name : 'Shani', age : 18},
-    {name : 'Shahzaib', age : 20},
-    {name : 'Danish', age : 17},
-];
-const adults = user.filter(person => person.age >= 18);
-console.log(adults);
+// const user = [
+//     {name : 'Malahim', age : 16},
+//     {name : 'Shani', age : 18},
+//     {name : 'Shahzaib', age : 20},
+//     {name : 'Danish', age : 17},
+// ];
+// const adults = user.filter(person => person.age >= 18);
+// console.log(adults);
+
+
+// 8. *Advanced Sorting:*
+//    - Q: Sort an array of strings based on their lengths in ascending order. If two strings have the same length, maintain their relative order in the sorted array.
+
+
+const stringsArray = ['apple', 'banana', 'orange', 'kiwi', 'grape'];
+stringsArray.sort((a,b) => {
+    if(a.length === b.length){
+        return 0;
+    }
+    else{
+        return a.length - b.length;
+    }
+});
+console.log(stringsArray);
