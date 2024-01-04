@@ -95,13 +95,25 @@
 //    - Q: Given an array of arrays containing numbers, use a combination of array methods to flatten the structure and then calculate the sum of all the numbers.
 
 
-const arr = [[1,2],[3,4],[4,5,6],[7,8,9,2]];
-const flatten = arr.reduce((acc, cur) => {
-    return acc.concat(cur);
-}, []);
+// const arr = [[1,2],[3,4],[4,5,6],[7,8,9,2]];
+// const flatten = arr.reduce((acc, cur) => {
+//     return acc.concat(cur);
+// }, []);
 
-const sum = flatten.reduce((acc, cur) => {
-    return acc + cur;
-});
+// const sum = flatten.reduce((acc, cur) => {
+//     return acc + cur;
+// });
+// console.log(sum);
 
-console.log(sum);
+
+// 10. *Error Handling with Find:*
+//     - Q: Modify the find method to handle the scenario where the desired element is not found, returning a custom default object instead.
+
+
+const array = [{ id: 1, name: 'Daniyal' }, { id: 2, name: 'Danish' }, { id: 3, name: 'Sharjeel' }];
+const findById = (id) => {
+    const defaultObject = {id: -1, name : 'Not Found'};
+    const foundObject = array.find(item => item.id === id);
+    return foundObject || defaultObject;
+}
+console.log(findById(4));
