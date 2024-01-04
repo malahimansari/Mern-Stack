@@ -79,13 +79,29 @@
 //    - Q: Sort an array of strings based on their lengths in ascending order. If two strings have the same length, maintain their relative order in the sorted array.
 
 
-const stringsArray = ['apple', 'banana', 'orange', 'kiwi', 'grape'];
-stringsArray.sort((a,b) => {
-    if(a.length === b.length){
-        return 0;
-    }
-    else{
-        return a.length - b.length;
-    }
+// const stringsArray = ['apple', 'banana', 'orange', 'kiwi', 'grape'];
+// stringsArray.sort((a,b) => {
+//     if(a.length === b.length){
+//         return 0;
+//     }
+//     else{
+//         return a.length - b.length;
+//     }
+// });
+// console.log(stringsArray);
+
+
+// 9. *Nested Array Operations:*
+//    - Q: Given an array of arrays containing numbers, use a combination of array methods to flatten the structure and then calculate the sum of all the numbers.
+
+
+const arr = [[1,2],[3,4],[4,5,6],[7,8,9,2]];
+const flatten = arr.reduce((acc, cur) => {
+    return acc.concat(cur);
+}, []);
+
+const sum = flatten.reduce((acc, cur) => {
+    return acc + cur;
 });
-console.log(stringsArray);
+
+console.log(sum);
