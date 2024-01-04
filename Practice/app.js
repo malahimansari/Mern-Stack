@@ -55,8 +55,21 @@
 //    - Q: Create a chain of array methods to find the average of all positive numbers in an array of mixed integers and return the result rounded to two decimal places.
 
 
-const integers = [3,4,-5,0,1,20,-8,1];
-const positiveNumbers = integers.filter(num => num > 0);
-const average = (positiveNumbers.reduce((acc, cur) => acc + cur, 0) / positiveNumbers.length).toFixed(2);
-console.log(average); 
+// const integers = [3,4,-5,0,1,20,-8,1];
+// const positiveNumbers = integers.filter(num => num > 0);
+// const average = (positiveNumbers.reduce((acc, cur) => acc + cur, 0) / positiveNumbers.length).toFixed(2);
+// console.log(average); 
 
+
+// 7. *Conditional Filtering:*
+//    - Q: Implement a function that takes an array of objects with 'age' properties and returns an array of those who are adults (age 18 and above) using the filter method.
+
+
+const user = [
+    {name : 'Malahim', age : 16},
+    {name : 'Shani', age : 18},
+    {name : 'Shahzaib', age : 20},
+    {name : 'Danish', age : 17},
+];
+const adults = user.filter(person => person.age >= 18);
+console.log(adults);
