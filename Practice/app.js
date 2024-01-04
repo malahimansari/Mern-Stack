@@ -1,6 +1,8 @@
 // 1. *Map Transformation:*
 //    - Q: Given an array of integers, use the map method to square each element and return a new array with the squared values
 
+const { array } = require("prop-types")
+
 // const arr = [2,4,5,8,9];
 // const square = arr.map((array) => {
 //     return array * array;
@@ -123,13 +125,25 @@
 //    - Q: How does the map method work in JavaScript, and can you provide an example of when you might use it to manipulate an array of objects?
 
 
-const products = [
-    { name: 'Laptop', price: 500 },
-    { name: 'Mobile', price: 300 },
-    { name: 'Watch', price: 40 }
-];
-const reudcePrices = products.map(item => {
-    const reudcePrice = item.price * 0.9;
-    return {...item, price: reudcePrice};
-})
-console.log(reudcePrices);
+// const products = [
+//     { name: 'Laptop', price: 500 },
+//     { name: 'Mobile', price: 300 },
+//     { name: 'Watch', price: 40 }
+// ];
+// const reudcePrices = products.map(item => {
+//     const reudcePrice = item.price * 0.9;
+//     return {...item, price: reudcePrice};
+// })
+// console.log(reudcePrices);
+
+
+// 12. *Filter Method:*
+//    - Q: Explain the purpose of the filter method. Provide an example where you use filter to extract elements from an array based on a specific condition.
+
+
+// Filter Method is used to create an new array containing elements from the orginial array
+// that passed a specific condition defined by a provided callback function
+
+const numbers = [5, 12, 7, 8, 15, 20, 11];
+const evenNumbers = numbers.filter(num => num%2 === 0);
+console.log(evenNumbers);
