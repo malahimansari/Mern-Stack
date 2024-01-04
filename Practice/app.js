@@ -110,10 +110,26 @@
 //     - Q: Modify the find method to handle the scenario where the desired element is not found, returning a custom default object instead.
 
 
-const array = [{ id: 1, name: 'Daniyal' }, { id: 2, name: 'Danish' }, { id: 3, name: 'Sharjeel' }];
-const findById = (id) => {
-    const defaultObject = {id: -1, name : 'Not Found'};
-    const foundObject = array.find(item => item.id === id);
-    return foundObject || defaultObject;
-}
-console.log(findById(4));
+// const array = [{ id: 1, name: 'Daniyal' }, { id: 2, name: 'Danish' }, { id: 3, name: 'Sharjeel' }];
+// const findById = (id) => {
+//     const defaultObject = {id: -1, name : 'Not Found'};
+//     const foundObject = array.find(item => item.id === id);
+//     return foundObject || defaultObject;
+// }
+// console.log(findById(4));
+
+
+// 11. *Map Method:*
+//    - Q: How does the map method work in JavaScript, and can you provide an example of when you might use it to manipulate an array of objects?
+
+
+const products = [
+    { name: 'Laptop', price: 500 },
+    { name: 'Mobile', price: 300 },
+    { name: 'Watch', price: 40 }
+];
+const reudcePrices = products.map(item => {
+    const reudcePrice = item.price * 0.9;
+    return {...item, price: reudcePrice};
+})
+console.log(reudcePrices);
