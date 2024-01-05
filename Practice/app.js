@@ -151,21 +151,33 @@
 //    - Q: Discuss the default behavior of the sort method for strings and numbers. How would you use a custom comparison function to sort an array of objects by a specific property?
 
 
-const books = [
-    { title: 'ABX', author: 'J.D. Salinger', year: 1951 },
-    { title: '1200', author: 'Johnssss', year: 1950 },
-    { title: 'ABC', author: 'Harper Lee', year: 1960 },
-    { title: '1984', author: 'George Orwell', year: 1949 }
-];
-books.sort((a, b) => {
-    const titleA = a.title.toLowerCase();
-    const titleB = b.title.toLowerCase();
-    if (titleA < titleB) {
-        return -1;
-      }
-      if (titleA > titleB) {
-        return 1;
-      }
-      return 0;
-});
-console.log(books);
+// const books = [
+//     { title: 'ABX', author: 'J.D. Salinger', year: 1951 },
+//     { title: '1200', author: 'Johnssss', year: 1950 },
+//     { title: 'ABC', author: 'Harper Lee', year: 1960 },
+//     { title: '1984', author: 'George Orwell', year: 1949 }
+// ];
+// books.sort((a, b) => {
+//     const titleA = a.title.toLowerCase();
+//     const titleB = b.title.toLowerCase();
+//     if (titleA < titleB) {
+//         return -1;
+//       }
+//       if (titleA > titleB) {
+//         return 1;
+//       }
+//       return 0;
+// });
+// console.log(books);
+
+
+// 14. *Reduce Method:*
+//    - Q: Describe the purpose of the reduce method and provide an example where you use it to compute a single value from an array of numbers.
+
+
+const numbers = [3,1,5,6,30];
+const sum = numbers.reduce((acc, cur) => {
+    return acc + cur;
+}, 0);
+
+console.log(sum);
