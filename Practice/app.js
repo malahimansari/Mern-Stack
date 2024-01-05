@@ -175,9 +175,28 @@
 //    - Q: Describe the purpose of the reduce method and provide an example where you use it to compute a single value from an array of numbers.
 
 
-const numbers = [3,1,5,6,30];
-const sum = numbers.reduce((acc, cur) => {
-    return acc + cur;
-}, 0);
+// const numbers = [3,1,5,6,30];
+// const sum = numbers.reduce((acc, cur) => {
+//     return acc + cur;
+// }, 0);
 
-console.log(sum);
+// console.log(sum);
+
+
+// 15. *Find Method:*
+//    - Q: How does the find method differ from filter? Give an example of a scenario where using find is more appropriate than filter.
+
+
+const users = [
+    { id: 1, name: 'Malahim' },
+    { id: 2, name: 'Sami' },
+    { id: 3, name: 'Zain' },
+  ];
+  const userIdToFind = 2;
+  const foundUser = users.find(user => user.id === userIdToFind);
+  if (foundUser) {
+    console.log(`User found: ${foundUser.name}`);
+  } else {
+    console.log('User not found');
+  }
+  
