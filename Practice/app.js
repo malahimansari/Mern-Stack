@@ -1,8 +1,6 @@
 // 1. *Map Transformation:*
 //    - Q: Given an array of integers, use the map method to square each element and return a new array with the squared values
 
-const { array } = require("prop-types")
-
 // const arr = [2,4,5,8,9];
 // const square = arr.map((array) => {
 //     return array * array;
@@ -144,6 +142,30 @@ const { array } = require("prop-types")
 // Filter Method is used to create an new array containing elements from the orginial array
 // that passed a specific condition defined by a provided callback function
 
-const numbers = [5, 12, 7, 8, 15, 20, 11];
-const evenNumbers = numbers.filter(num => num%2 === 0);
-console.log(evenNumbers);
+// const numbers = [5, 12, 7, 8, 15, 20, 11];
+// const evenNumbers = numbers.filter(num => num%2 === 0);
+// console.log(evenNumbers);
+
+
+// 13. *Sort Method:*
+//    - Q: Discuss the default behavior of the sort method for strings and numbers. How would you use a custom comparison function to sort an array of objects by a specific property?
+
+
+const books = [
+    { title: 'ABX', author: 'J.D. Salinger', year: 1951 },
+    { title: '1200', author: 'Johnssss', year: 1950 },
+    { title: 'ABC', author: 'Harper Lee', year: 1960 },
+    { title: '1984', author: 'George Orwell', year: 1949 }
+];
+books.sort((a, b) => {
+    const titleA = a.title.toLowerCase();
+    const titleB = b.title.toLowerCase();
+    if (titleA < titleB) {
+        return -1;
+      }
+      if (titleA > titleB) {
+        return 1;
+      }
+      return 0;
+});
+console.log(books);
