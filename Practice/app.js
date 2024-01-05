@@ -205,9 +205,22 @@
 //   - Q: Create a chain of array methods (map, filter, reduce, etc.) to transform an array of strings into a single concatenated string with a specific condition.
 
 
-const stringsArray = ['apple', 'banana', 'orange', 'kiwi', 'pear', 'grape', 'fig'];
-const concatenatedString = stringsArray
-  .filter(str => str.length > 3)
-  .map(str => str.toUpperCase())
-  .reduce((accumulator, currentValue) => accumulator + " " + currentValue, '');
-console.log(concatenatedString);
+// const stringsArray = ['apple', 'banana', 'orange', 'kiwi', 'pear', 'grape', 'fig'];
+// const concatenatedString = stringsArray
+//   .filter(str => str.length > 3)
+//   .map(str => str.toUpperCase())
+//   .reduce((accumulator, currentValue) => accumulator + " " + currentValue, '');
+// console.log(concatenatedString);
+
+
+// 17. *Callback Functions:*
+//    - Q: Explain the concept of callback functions in the context of array methods. Provide an example of using a callback function with the map method.
+
+
+const arr = [1,2,3,4,5,6];
+const square = (num) => {
+    return num * num;
+}
+const numbers = arr.map(square);
+console.log(arr);
+console.log(numbers);
