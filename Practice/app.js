@@ -187,16 +187,27 @@
 //    - Q: How does the find method differ from filter? Give an example of a scenario where using find is more appropriate than filter.
 
 
-const users = [
-    { id: 1, name: 'Malahim' },
-    { id: 2, name: 'Sami' },
-    { id: 3, name: 'Zain' },
-  ];
-  const userIdToFind = 2;
-  const foundUser = users.find(user => user.id === userIdToFind);
-  if (foundUser) {
-    console.log(`User found: ${foundUser.name}`);
-  } else {
-    console.log('User not found');
-  }
-  
+// const users = [
+//     { id: 1, name: 'Malahim' },
+//     { id: 2, name: 'Sami' },
+//     { id: 3, name: 'Zain' },
+//   ];
+//   const userIdToFind = 2;
+//   const foundUser = users.find(user => user.id === userIdToFind);
+//   if (foundUser) {
+//     console.log(`User found: ${foundUser.name}`);
+//   } else {
+//     console.log('User not found');
+//   }
+
+
+//   16. *Combining Methods:*
+//   - Q: Create a chain of array methods (map, filter, reduce, etc.) to transform an array of strings into a single concatenated string with a specific condition.
+
+
+const stringsArray = ['apple', 'banana', 'orange', 'kiwi', 'pear', 'grape', 'fig'];
+const concatenatedString = stringsArray
+  .filter(str => str.length > 3)
+  .map(str => str.toUpperCase())
+  .reduce((accumulator, currentValue) => accumulator + " " + currentValue, '');
+console.log(concatenatedString);
