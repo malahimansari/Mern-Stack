@@ -217,10 +217,28 @@
 //    - Q: Explain the concept of callback functions in the context of array methods. Provide an example of using a callback function with the map method.
 
 
-const arr = [1,2,3,4,5,6];
-const square = (num) => {
-    return num * num;
+// const arr = [1,2,3,4,5,6];
+// const square = (num) => {
+//     return num * num;
+// }
+// const numbers = arr.map(square);
+// console.log(arr);
+// console.log(numbers);
+
+
+// 18. *Error Handling:*
+//    - Q: How would you handle potential errors when using array methods like find or reduce? Provide an example of error handling in such a scenario.
+
+
+const numbers = [3,5,9,2,'seven',8];
+try {
+    const sum = numbers.reduce((acc , cur) => {
+        if(typeof numbers !== 'number'){
+            throw new Error('Non-numeric Value Found');
+        }
+        return acc + cur;
+    }, 0);
+    console.log('Sum:', sum);
+} catch (error) {
+    console.error('Error:', error.message);
 }
-const numbers = arr.map(square);
-console.log(arr);
-console.log(numbers);
