@@ -254,3 +254,12 @@ const filterArray = mapArray.filter(num => num %2 === 0);
 console.log(`Original Array : ${originalArray}`);
 console.log(`Map Array : ${mapArray}`);
 console.log(`Filter Array : ${filterArray}`);
+
+
+
+// 20. *Performance Considerations:*
+    // - Q: Compare the performance implications of using map versus forEach. In what scenarios would you prefer one over the other, and why?
+
+
+    // In terms of raw performance, forEach might be marginally faster than map because forEach simply iterates over the array and executes the provided function without creating a new array.
+    // map incurs the additional overhead of creating a new array with the transformed values, which might result in slightly slower performance compared to forEach when dealing with very large arrays.
