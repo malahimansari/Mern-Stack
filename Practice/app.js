@@ -230,15 +230,27 @@
 //    - Q: How would you handle potential errors when using array methods like find or reduce? Provide an example of error handling in such a scenario.
 
 
-const numbers = [3,5,9,2,'seven',8];
-try {
-    const sum = numbers.reduce((acc , cur) => {
-        if(typeof numbers !== 'number'){
-            throw new Error('Non-numeric Value Found');
-        }
-        return acc + cur;
-    }, 0);
-    console.log('Sum:', sum);
-} catch (error) {
-    console.error('Error:', error.message);
-}
+// const numbers = [3,5,9,2,'seven',8];
+// try {
+//     const sum = numbers.reduce((acc , cur) => {
+//         if(typeof numbers !== 'number'){
+//             throw new Error('Non-numeric Value Found');
+//         }
+//         return acc + cur;
+//     }, 0);
+//     console.log('Sum:', sum);
+// } catch (error) {
+//     console.error('Error:', error.message);
+// }
+
+
+// 19. *Immutable Operations:*
+//    - Q: Discuss the importance of immutability when working with array methods. Demonstrate how you would perform immutable operations using methods like map or filter.
+
+
+const originalArray = [2,4,9,12,10,3];
+const mapArray = originalArray.map(num => num **2);
+const filterArray = mapArray.filter(num => num %2 === 0);
+console.log(`Original Array : ${originalArray}`);
+console.log(`Map Array : ${mapArray}`);
+console.log(`Filter Array : ${filterArray}`);
