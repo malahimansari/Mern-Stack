@@ -12,17 +12,16 @@
 //    - Q: Take an array of strings, filter out the ones with a length less than 5, and then capitalize the remaining strings using the map method.
 
 // let arr = ["car","bus","aeroplane","bike","helicopter"];
-
 // let filter_array = arr.filter(e => e.length >=5)
 // .map(e => e.charAt(0).toUpperCase() + e.slice(1));
-
 // console.log(filter_array);
 
 
 // 3. *Sorting Objects:*
 //    - Q: Given an array of objects with a 'price' property, use the sort method to arrange them in descending order based on their prices.
 
-// let products = [{name : "Product 1", price : 20},{name : "Product 2", price : 40},{name : "Product 3", price : 10},{name : "Product 4", price : 35}];
+// let products = [{name : "Product 1", price : 20},{name : "Product 2", price : 40},
+// {name : "Product 3", price : 10},{name : "Product 4", price : 35}];
 // let price = products.sort((a,b) => b.price - a.price);
 // console.log(price); 
 
